@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+#wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'header header'
+    'main aside'
+    'kbd kbd'
+    'footer footer';
+  /* justify-items: center; */
+}
+
+#wrapper header {
+  grid-area: header;
+}
+
+#wrapper .events-wrapper {
+  grid-area: main;
+}
+
+#wrapper .history-wrapper {
+  grid-area: aside;
+}
+
+#wrapper .keyboard-wrapper {
+  grid-area: kbd;
+}
+
+#wrapper footer {
+  grid-area: footer;
+}
+
+#wrapper header,
+footer {
+  display: grid;
+  justify-items: center;
+  padding: 25px;
+}
+
+.active > kbd {
+  background-color: red;
+}
