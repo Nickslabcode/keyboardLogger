@@ -3,17 +3,214 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Keyboard Logger</title>
   </head>
   <body>
     <div id="wrapper">
-      <header>KeyLogger</header>
-      <div id="content">
-        <div id="events-wrapper"></div>
-        <div id="history"></div>
-        <div id="keyboard-wrapper"></div>
+      <header>
+        <h1>Key Logger</h1>
+      </header>
+      <div class="events-wrapper">
+        <div class="key-box"></div>
+        <div class="key-code-box"></div>
       </div>
-      <footer></footer>
+      <div class="history-wrapper">
+        <h2>Event history</h2>
+        <div class="history-container"></div>
+      </div>
+      <div class="keyboard-wrapper">
+        <div class="keys">
+          <div data-key="192" class="key">
+            <kbd>`~</kbd>
+          </div>
+          <div data-key="49" class="key">
+            <kbd>1!</kbd>
+          </div>
+          <div data-key="50" class="key">
+            <kbd>2@</kbd>
+          </div>
+          <div data-key="51" class="key">
+            <kbd>3#</kbd>
+          </div>
+          <div data-key="52" class="key">
+            <kbd>4$</kbd>
+          </div>
+          <div data-key="53" class="key">
+            <kbd>5%</kbd>
+          </div>
+          <div data-key="54" class="key">
+            <kbd>6^</kbd>
+          </div>
+          <div data-key="55" class="key">
+            <kbd>7&</kbd>
+          </div>
+          <div data-key="56" class="key">
+            <kbd>8*</kbd>
+          </div>
+          <div data-key="57" class="key">
+            <kbd>9(</kbd>
+          </div>
+          <div data-key="48" class="key">
+            <kbd>0)</kbd>
+          </div>
+          <div data-key="189" class="key">
+            <kbd>-_</kbd>
+          </div>
+          <div data-key="187" class="key">
+            <kbd>=+</kbd>
+          </div>
+          <div data-key="8" class="key">
+            <kbd>⌫</kbd>
+          </div>
+          <div data-key="9" class="key">
+            <kbd>TAB</kbd>
+          </div>
+          <div data-key="81" class="key">
+            <kbd>Q</kbd>
+          </div>
+          <div data-key="87" class="key">
+            <kbd>W</kbd>
+          </div>
+          <div data-key="69" class="key">
+            <kbd>E</kbd>
+          </div>
+          <div data-key="82" class="key">
+            <kbd>R</kbd>
+          </div>
+          <div data-key="84" class="key">
+            <kbd>T</kbd>
+          </div>
+          <div data-key="89" class="key">
+            <kbd>Y</kbd>
+          </div>
+          <div data-key="85" class="key">
+            <kbd>U</kbd>
+          </div>
+          <div data-key="73" class="key">
+            <kbd>I</kbd>
+          </div>
+          <div data-key="79" class="key">
+            <kbd>O</kbd>
+          </div>
+          <div data-key="80" class="key">
+            <kbd>P</kbd>
+          </div>
+          <div data-key="219" class="key">
+            <kbd>[{</kbd>
+          </div>
+          <div data-key="221" class="key">
+            <kbd>]}</kbd>
+          </div>
+          <div data-key="220" class="key">
+            <kbd>\|</kbd>
+          </div>
+          <div data-key="20" class="key">
+            <kbd>CAPS</kbd>
+          </div>
+          <div data-key="65" class="key">
+            <kbd>A</kbd>
+          </div>
+          <div data-key="83" class="key">
+            <kbd>S</kbd>
+          </div>
+          <div data-key="68" class="key">
+            <kbd>D</kbd>
+          </div>
+          <div data-key="70" class="key">
+            <kbd>F</kbd>
+          </div>
+          <div data-key="71" class="key">
+            <kbd>G</kbd>
+          </div>
+          <div data-key="72" class="key">
+            <kbd>H</kbd>
+          </div>
+          <div data-key="74" class="key">
+            <kbd>J</kbd>
+          </div>
+          <div data-key="75" class="key">
+            <kbd>K</kbd>
+          </div>
+          <div data-key="76" class="key">
+            <kbd>L</kbd>
+          </div>
+          <div data-key="186" class="key">
+            <kbd>;</kbd>
+          </div>
+          <div data-key="222" class="key">
+            <kbd>'</kbd>
+          </div>
+          <div data-key="13" class="key">
+            <kbd>↵</kbd>
+          </div>
+          <div data-key="16" class="key">
+            <kbd>⇧</kbd>
+          </div>
+          <div data-key="90" class="key">
+            <kbd>Z</kbd>
+          </div>
+          <div data-key="88" class="key">
+            <kbd>X</kbd>
+          </div>
+          <div data-key="67" class="key">
+            <kbd>C</kbd>
+          </div>
+          <div data-key="86" class="key">
+            <kbd>V</kbd>
+          </div>
+          <div data-key="66" class="key">
+            <kbd>B</kbd>
+          </div>
+          <div data-key="78" class="key">
+            <kbd>N</kbd>
+          </div>
+          <div data-key="77" class="key">
+            <kbd>M</kbd>
+          </div>
+          <div data-key="188" class="key">
+            <kbd>,<</kbd>
+          </div>
+          <div data-key="190" class="key">
+            <kbd>.></kbd>
+          </div>
+          <div data-key="191" class="key">
+            <kbd>/?</kbd>
+          </div>
+          <div data-key="16" class="key">
+            <kbd>⇧</kbd>
+          </div>
+          <div data-key="38" class="key">
+            <kbd>^</kbd>
+          </div>
+          <div data-key="18" class="key">
+            <kbd>⌥</kbd>
+          </div>
+          <div data-key="91" class="key">
+            <kbd>⌘</kbd>
+          </div>
+          <div data-key="32" class="key">
+            <kbd> </kbd>
+          </div>
+          <div data-key="93" class="key">
+            <kbd>⌘</kbd>
+          </div>
+          <div data-key="18" class="key">
+            <kbd>⌥</kbd>
+          </div>
+          <div data-key="0" class="key">
+            <kbd>FN</kbd>
+          </div>
+          <div data-key="40" class="key">
+            <kbd>^</kbd>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>Copyright © Something Something 2024</p>
+      </footer>
     </div>
+    <audio src="./boom.wav" id="key-sound"></audio>
+    <script src="./index.js"></script>
   </body>
 </html>
