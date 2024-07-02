@@ -61,8 +61,10 @@ window.addEventListener('keydown', event => {
 });
 
 window.addEventListener('keyup', event => {
-  const targetKey = document.querySelector(`div[data-key="${event.keyCode}"]`);
-
+  let targetKey = document.querySelector(`div[data-key="${event.keyCode}"]`);
+  if (event.code.endsWith('Right')) {
+    targetKey = document.querySelector(`.right[data-key="${event.keyCode}"]`);
+  }
   if (targetKey.classList.contains('pushed')) {
     targetKey.classList.remove('pushed');
   }
