@@ -30,7 +30,7 @@ body {
 #wrapper .events-container {
   grid-area: main;
   display: grid;
-  grid-template-columns: 200px 200px;
+  grid-template-columns: 220px 220px;
   padding: 50px;
   height: 300px;
   grid-gap: 50px;

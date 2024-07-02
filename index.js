@@ -23,8 +23,16 @@ const updateEventContainer = (event = '') => {
 
 window.addEventListener('keydown', event => {
   const keySound = document.querySelector('#key-sound');
-  const targetKey = document.querySelector(`div[data-key="${event.keyCode}"]`);
+  let targetKey = document.querySelector(`div[data-key="${event.keyCode}"]`);
+  let keyValue = event.key;
+  if (keyValue === ' ') {
+    keyValue = 'Space';
+  } else if (event.code.endsWith('Right')) {
+    targetKey = document.querySelector(`.right[data-key="${event.keyCode}"]`);
+    keyValue = 'R ' + keyValue;
+  }
 
+  console.log(targetKey);
   targetKey.classList.add('pushed');
   keySound.currentTime = 0;
   keySound.volume = 0.1;
@@ -33,7 +41,7 @@ window.addEventListener('keydown', event => {
   updateEventContainer(`
     <div class="key-box">
       <h2>event.key</h2>
-      <div>${event.key === ' ' ? 'Space' : event.key}</div>
+      <div>${keyValue}</div>
       <p>The value of the key pressed.</p>
     </div>
     <div class="key-code-box">
@@ -45,7 +53,7 @@ window.addEventListener('keydown', event => {
 
   updateHistory(`
     <div class="history-event">
-      <span>key: <b>${event.key === ' ' ? 'Space' : event.key}</b></span>
+      <span>key: <b>${keyValue}</b></span>
       <span class="separator">|</span>
       <span>keyCode: <b>${event.keyCode}</b></span>
     </div>
