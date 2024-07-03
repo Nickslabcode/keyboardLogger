@@ -11,8 +11,17 @@ const updateHistory = (event = '') => {
     p.innerHTML = element;
     historyContainer.appendChild(p);
   });
-
   history.push(event);
+};
+
+const changeVolume = () => {
+  const keySound = document.querySelector('#key-sound');
+  const volumeIcon = document.querySelector('.volume');
+  const isMuted = volumeIcon.querySelector('.fa-volume-xmark');
+  volumeIcon.innerHTML = isMuted
+    ? '<i class="fa-solid fa-volume-high"></i>'
+    : '<i class="fa-solid fa-volume-xmark"></i>';
+  keySound.muted = !keySound.muted;
 };
 
 const updateEventContainer = (event = '') => {
@@ -21,7 +30,17 @@ const updateEventContainer = (event = '') => {
   eventsContainer.innerHTML = event;
 };
 
+document.addEventListener('click', event => {
+  if (
+    event.target.classList.contains('volume') ||
+    event.target.classList.contains('fa-solid')
+  ) {
+    changeVolume();
+  }
+});
+
 window.addEventListener('keydown', event => {
+  event.target.blur(); // lose focus on the control buttons after keydown
   const keySound = document.querySelector('#key-sound');
   let targetKey = document.querySelector(`div[data-key="${event.keyCode}"]`);
   let keyValue = event.key;
@@ -32,7 +51,6 @@ window.addEventListener('keydown', event => {
     keyValue = 'R ' + keyValue;
   }
 
-  console.log(targetKey);
   targetKey.classList.add('pushed');
   keySound.currentTime = 0;
   keySound.volume = 0.1;
@@ -49,7 +67,7 @@ window.addEventListener('keydown', event => {
       <div>${event.keyCode}</div>
       <p>the code associated with the key pressed.</p>
     </div>
-  `)
+  `);
 
   updateHistory(`
     <div class="history-event">

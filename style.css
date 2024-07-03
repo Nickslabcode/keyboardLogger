@@ -176,3 +176,43 @@ footer {
   box-shadow: 0 0 1rem #ffc600;
   color: #ffc600;
 }
+
+.fa-volume-xmark,
+.fa-volume-high {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.controls {
+  display: grid;
+  justify-self: center;
+  padding-bottom: 30px;
+}
+
+.volume {
+  width: 45px;
+  height: 45px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  padding-bottom: 8px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.volume:hover {
+  transition: all 0.1s ease-out;
+  color: #ffc600;
+  border-color: #ffc600;
+  box-shadow: 0 0 0.8rem #ffc600;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.volume:hover .fa-volume-xmark,
+.volume:hover .fa-volume-high {
+  transition: all 0.1s ease-out;
+  color: #ffc600;
+}
+
+.volume:active {
+  transform: scale(1);
+}
