@@ -1,7 +1,6 @@
+# KeyboardLogger  
 
 <!-- End of Section -->
-
-# KeyboardLogger  
 
 **KeyboardLogger** is a simple one-page application that displays data about keyboard events, event history, and includes a keyboard visualizer.
 
