@@ -1,8 +1,11 @@
-# KeyboardLogger  
 
 <!-- End of Section -->
 
-**KeyboardLogger** is a simple one-page application that displays data about keyboard events, event history, and includes a keyboard visualizer.
+## Description
+
+### [Live demo](https://kblogger.nikola-nenovski.info)  
+
+A simple one-page application that displays data about keyboard events, event history, and includes a keyboard visualizer.  
 
 <!-- End of Section -->
 
