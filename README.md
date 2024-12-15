@@ -8,3 +8,5 @@
 <!-- End of Section -->
 
 ![KeyboardLogger in Action](https://nikola-nenovski.info/keyboard-logger/kblogger.gif)
+
+<!-- End of Section -->
